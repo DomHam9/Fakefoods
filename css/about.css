@@ -1,0 +1,78 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    background-color: rgb(83, 109, 182);
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 10px 25px;
+}
+
+
+
+/* --------- Main Page---------- */
+h1 {
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.mainBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainBody h3 {
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+
+.mainBody p {
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+.mainBody a {
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 6px;
+}
+
+
+
+/* --------- CLose Button---------- */
+
+.menuReturn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin-top: 25px;
+    padding: 9px 25px;
+    background-color: rgba(0,100,215,1);
+    color: whitesmoke;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.25s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0,100,215,0.75); 
+}

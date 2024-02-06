@@ -1,0 +1,87 @@
+<DOCTYPE! html>
+<html lang="en">
+    <head>
+        <title>Fake Food</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/index.css">
+        <!-- <script type="text/javascript"src="jsphp/database.js"></script> -->
+    </head>   
+        <!-- <body id="body" onload="canvas_game_db.run_form()"> -->
+        <body id="body" onload="canvas_game_db.run_form()">
+    
+        <div class="bodyColumn">
+
+        <!-- user can select options such as colour of player, and the colour of food -->
+        <div class="startGame" id="remove1">
+            <div class="gameStart">
+                <div class="gameStartBody">
+                    <h3>Set zoom to 80% (For 1080p)</h3>
+                    <!--onlclick, run the start game function to start running the game-->
+                    <button onclick="startGameButton(); sphereConsumer.start_game()">Start Game</button>
+
+                </div>
+                
+            </div>
+        </div>
+
+        
+        <!-- Nav bar containing link to about page -->
+        <header class="header">
+            <nav>
+                <ul class="nav_links">
+                    <!--Target blank means that it will open the link in a new tab-->
+                    <li><a href="about.html" target="_blank">About</a></li> <!--link to about page-->
+                </ul>
+            </nav>
+        </header>
+
+
+        <!-- Game screen  and controls image on bottom -->
+        <div class="canvasArea">
+            <h1>Fake Food</h1>
+            <h3>Time (Seconds): <span id="time">0</span></h3> <!--span tag has id so it can be changed in the JS for the playerTime-->
+            <div class="playPause" id="playPause">
+                <div class="playpauseAudio">
+                    <button type="button" id="playpauseBTN">Music On/Off</button> <!--Button to let player toggle music-->
+                </div>
+            </div>
+            <canvas id="gamecanvas" width="800" height="600" style="border:3px solid"> <!--creates a canvas with set dimensions with a border of 3px solid-->
+            Canvas Not Supported By Your Browser!! <!--If the users browser doesn't support canvas-->
+            </canvas>
+        </div>
+
+        <!--An image for help instead of page so it is always on screen instead of being a seperate page -->
+        <div class="help-div" id ="remove3">
+            <div class="help-image">
+                <img src="images/help.png" alt="help" id="help-image"> 
+            </div>
+        </div>
+
+
+        <!----------------------- LOSE ----------------------------->
+        <!-- Making a button for if the player loses -->
+        <div class="restartgame" id="restartbtnDIV">
+            <div class="restartgame-button">
+                <button class="restartbtn" id="restartbtn">Play Again</button>
+            </div>
+        </div>
+
+
+
+        <!------------------------- WIN ----------------------------->
+        <!-- Making a button for if the player wins -->
+        <div class="restartgamew" id="restartbtnDIVw">
+            <div class="restartgame-buttonw">
+                <!--uses type submit so that it (should) work with the caller in the canvas_game_db Function-->
+                <button type="submit" class="restartbtn" id="restartbtnw">Play Again</button>
+            </div>
+        </div>
+
+
+        </div>
+
+        <!--Linking the JavaScript file at the bottom of the screen-->
+        <script src="js/game.js"></script>
+    </body>
+</html>
